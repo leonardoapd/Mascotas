@@ -1,5 +1,6 @@
 package com.lperdomoduran.mascotas;
 
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,6 +53,7 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
 
     public static class MascotaViewHolder extends RecyclerView.ViewHolder {
 
+        private CardView cv_mascota;
         private ImageView iv_photo_cv;
         private ImageButton iv_like_cv;
         private TextView tv_name_cv;
@@ -59,6 +61,7 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
 
         public MascotaViewHolder(View itemView) {
             super(itemView);
+            cv_mascota = (CardView) itemView.findViewById(R.id.cv_mascota);
             iv_photo_cv = (ImageView) itemView.findViewById(R.id.iv_photo_cv);
             tv_name_cv = (TextView) itemView.findViewById(R.id.tv_name_cv);
             tv_likes_cv = (TextView) itemView.findViewById(R.id.tv_likes_cv);

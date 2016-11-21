@@ -8,8 +8,14 @@
         app:showAsAction="always"/>
 
     <!-- Settings, should always be in the overflow -->
-    <item android:id="@+id/action_settings"
-        android:title="Leonardo Perdomo"
-        app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/action_contact"
+        android:title="Contacto"
+        android:orderInCategory="1"
+        />
+
+    <item android:id="@+id/action_about"
+        android:title="Acerca de"
+        android:orderInCategory="2"
+        />
 
 </menu>

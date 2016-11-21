@@ -3,6 +3,9 @@ package com.lperdomoduran.mascotas;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -16,10 +19,18 @@ import android.view.View;
 
 import java.util.ArrayList;
 
+import layout.ProfileFragment;
+import layout.RecyclerViewFragment;
+
+import static android.os.Build.VERSION_CODES.M;
+
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Mascota> miMascota = new ArrayList<Mascota>();
-    private RecyclerView listaMascotas;
+
+
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,34 +41,39 @@ public class MainActivity extends AppCompatActivity {
         Toolbar action_bar = (Toolbar) findViewById(R.id.miActionBar);
         setSupportActionBar(action_bar);
 
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
 
-        listaMascotas = (RecyclerView) findViewById(R.id.rv_mascotas);
 
+        setupViewPager();
+        /*
 
-        LinearLayoutManager llm = new LinearLayoutManager((this));
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        */
 
-        //GridLayoutManager llm = new GridLayoutManager(this, 2);
-        listaMascotas.setLayoutManager(llm);
-        initMascotaList();
-        initAdapter();
+        if(toolbar != null){
+            setSupportActionBar(toolbar);
+        }
 
     }
 
-    public void initAdapter() {
-        MascotaAdapter adapter = new MascotaAdapter(miMascota);
-        listaMascotas.setAdapter(adapter);
+    private ArrayList<Fragment> addFragments(){
+        ArrayList<Fragment> fragments = new ArrayList<>();
+
+        fragments.add(new RecyclerViewFragment());
+        fragments.add(new ProfileFragment());
+
+        return fragments;
     }
 
-    public void initMascotaList() {
-        miMascota.add(new Mascota("Cisco", R.drawable.argentino, "0"));
-        miMascota.add(new Mascota("Caitlin", R.drawable.chihuahua, "0"));
-        miMascota.add(new Mascota("Joe", R.drawable.mucuchies, "0"));
-        miMascota.add(new Mascota("Barry", R.drawable.havanese, "0"));
-        miMascota.add(new Mascota("Ronnie", R.drawable.orchid, "0"));
-        miMascota.add(new Mascota("Wells", R.drawable.brasilero, "0"));
-        miMascota.add(new Mascota("Iris", R.drawable.paulinista, "0"));
+    public void setupViewPager(){
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), addFragments()));
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.home_48);
+        tabLayout.getTabAt(1).setIcon(R.drawable.dog_48);
     }
+
+
 
     public void likeThePhoto() {
 
@@ -85,9 +101,20 @@ public class MainActivity extends AppCompatActivity {
             case R.id.top_five:
                 Intent intento = new Intent(MainActivity.this, fav_mascota.class);
                 startActivity(intento);
-            default:
-                return super.onOptionsItemSelected(item);
+                break;
+            case R.id.action_contact:
+                Intent contactIntent = new Intent(this, FormActivity.class);
+                startActivity(contactIntent);
+                break;
+            case R.id.action_about:
+                Intent aboutIntent = new Intent(this, AboutActivity.class);
+                startActivity(aboutIntent);
+                break;
+
+
         }
+        return super.onOptionsItemSelected(item);
 
     }
 }
+

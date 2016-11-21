@@ -16,17 +16,41 @@
         android:layout_height="match_parent">
 
 
-        <include
+        <!-- <include
             android:id="@+id/miActionBar"
-            layout="@layout/action_bar"></include>
+            layout="@layout/action_bar"></include>-->
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_mascotas"
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.design.widget.TabLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/miActionBar">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_below="@id/appBarLayout">
 
-        </android.support.v7.widget.RecyclerView>
+        </android.support.v4.view.ViewPager>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/myFab"
@@ -36,7 +60,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginBottom="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:src="@drawable/camera"
+            android:src="@drawable/camera_48"
             app:fabSize="auto" />
 
     </RelativeLayout>

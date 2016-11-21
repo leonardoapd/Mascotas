@@ -31,6 +31,7 @@ public class fav_mascota extends AppCompatActivity {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
 
         //GridLayoutManager llm = new GridLayoutManager(this, 2);
+        listaMascotas.setHasFixedSize(true);
         listaMascotas.setLayoutManager(llm);
         initMascotaList();
         initAdapter();
@@ -44,11 +45,11 @@ public class fav_mascota extends AppCompatActivity {
     }
 
     public void initMascotaList() {
-        miMascota.add(new Mascota("Cisco", R.drawable.argentino, "0"));
         miMascota.add(new Mascota("Caitlin", R.drawable.chihuahua, "0"));
         miMascota.add(new Mascota("Joe", R.drawable.mucuchies, "0"));
         miMascota.add(new Mascota("Barry", R.drawable.havanese, "0"));
         miMascota.add(new Mascota("Ronnie", R.drawable.orchid, "0"));
+        miMascota.add(new Mascota("Cisco", R.drawable.argentino, "0"));
     }
 
     @Override

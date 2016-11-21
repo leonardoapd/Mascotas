@@ -8,7 +8,8 @@
     android:layout_marginLeft="@dimen/activity_horizontal_margin"
     android:layout_marginRight="@dimen/activity_horizontal_margin"
     card_view:cardCornerRadius="@dimen/cardview_default_radius"
-    card_view:cardElevation="@dimen/cardview_default_elevation">
+    card_view:cardElevation="@dimen/cardview_default_elevation"
+    card_view:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,11 +19,9 @@
 
         <ImageView
             android:id="@+id/iv_photo_cv"
-            android:layout_width="@dimen/photo_dimension"
-            android:layout_height="@dimen/photo_dimension"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
             android:src="@drawable/mucuchies" />
 
 
@@ -43,7 +42,7 @@
             android:layout_alignLeft="@+id/iv_photo_cv"
             android:layout_alignStart="@+id/iv_photo_cv"
             android:layout_alignTop="@+id/tv_likes_cv"
-            android:background="@drawable/bone" />
+            android:background="@drawable/dog_bone_48" />
 
         <TextView
             android:id="@+id/tv_name_cv"

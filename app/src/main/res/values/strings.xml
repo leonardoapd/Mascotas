@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Mascotas</string>
+    <string name="form_username">Name</string>
+    <string name="pick_date">Pick Date</string>
+    <string name="string_date">Birthday Date</string>
+    <string name="form_phone">Phone</string>
+    <string name="form_email">Email</string>
+    <string name="form_msg">Message</string>
+    <string name="next_activity">Send Comment</string>
+    <string name="datos_confirmar">Confirm Contact</string>
+    <string name="editar_datos">Edit Data</string>
+    <string name="bio">Developer: Leonardo Andrés Perdomo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

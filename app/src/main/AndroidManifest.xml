@@ -25,6 +25,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lperdomoduran.mascotas.MainActivity" />
         </activity>
+        <activity android:name=".FormActivity" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>
