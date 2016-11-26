@@ -1,4 +1,4 @@
-package com.lperdomoduran.mascotas;
+package com.lperdomoduran.mascotas.MailSender;
 
 /**
  * Created by lperdomoduran on 20/11/16.

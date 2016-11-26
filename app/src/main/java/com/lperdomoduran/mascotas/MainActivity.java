@@ -8,21 +8,17 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.lperdomoduran.mascotas.Adapters.PageAdapter;
+import com.lperdomoduran.mascotas.Fragments.ProfileFragment;
+import com.lperdomoduran.mascotas.Fragments.RecyclerViewFragment;
+import com.lperdomoduran.mascotas.MailSender.FormActivity;
+
 import java.util.ArrayList;
-
-import layout.ProfileFragment;
-import layout.RecyclerViewFragment;
-
-import static android.os.Build.VERSION_CODES.M;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -99,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.top_five:
-                Intent intento = new Intent(MainActivity.this, fav_mascota.class);
+                Intent intento = new Intent(MainActivity.this, Fav_Mascota_Activity.class);
                 startActivity(intento);
                 break;
             case R.id.action_contact:

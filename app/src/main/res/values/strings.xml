@@ -10,7 +10,6 @@
     <string name="datos_confirmar">Confirm Contact</string>
     <string name="editar_datos">Edit Data</string>
     <string name="bio">Developer: Leonardo Andrés Perdomo</string>
+    <string name="likes">Likes</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

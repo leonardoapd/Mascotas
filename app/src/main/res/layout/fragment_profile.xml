@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="layout.ProfileFragment">
+    tools:context=".Fragments.ProfileFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
         </View>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_mascotas"
+            android:id="@+id/rv_gl_mascotas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/oneDpView">

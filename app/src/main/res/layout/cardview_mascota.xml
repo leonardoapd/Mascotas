@@ -32,7 +32,7 @@
             android:layout_alignEnd="@+id/iv_photo_cv"
             android:layout_alignRight="@+id/iv_photo_cv"
             android:layout_below="@+id/iv_photo_cv"
-            android:text="5"
+            android:text="@string/likes"
             android:textSize="@dimen/cardview_name_size" />
 
         <ImageButton

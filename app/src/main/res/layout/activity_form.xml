@@ -4,7 +4,7 @@
     android:id="@+id/activity_form"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lperdomoduran.mascotas.FormActivity">
+    tools:context="com.lperdomoduran.mascotas.MailSender.FormActivity">
 
     <include
         android:id="@+id/miActionBar"

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_gl_mascota"
+    android:layout_width="100dp"
+    android:layout_height="190dp"
+    card_view:cardCornerRadius="4dp"
+    android:layout_margin="5dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/iv_photo_cv"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:padding="8dp"
+            android:layout_gravity="center"
+            android:src="@drawable/mucuchies"
+            android:scaleType="centerCrop"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            >
+            <TextView
+                android:id="@+id/tvRaitingMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="10"
+                android:textSize="25sp"
+                />
+            <ImageButton
+                android:id="@+id/btnRaitingMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dog_bone_48"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".fav_mascota"
+            android:name=".Fav_Mascota_Activity"
             android:label="@string/app_name"
             android:parentActivityName=".MainActivity">
 
@@ -25,7 +25,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lperdomoduran.mascotas.MainActivity" />
         </activity>
-        <activity android:name=".FormActivity" />
+        <activity android:name=".MailSender.FormActivity" />
         <activity android:name=".AboutActivity"></activity>
     </application>
 

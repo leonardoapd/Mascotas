@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDivider"
-    tools:context="com.lperdomoduran.mascotas.fav_mascota">
+    tools:context="com.lperdomoduran.mascotas.Fav_Mascota_Activity">
 
     <include
         android:id="@+id/miActionBar"

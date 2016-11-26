@@ -1,4 +1,4 @@
-package com.lperdomoduran.mascotas;
+package com.lperdomoduran.mascotas.Model;
 
 /**
  * Created by lperdomoduran on 12/11/16.
@@ -6,15 +6,23 @@ package com.lperdomoduran.mascotas;
 
 public class Mascota {
 
+
+
+    private int id;
     private String name;
     private int photo;
-    private String likes;
+    private int likes = 0;
 
-    public Mascota(String name, int photo, String likes) {
+    public Mascota(String name, int photo, int likes) {
         this.name = name;
         this.photo = photo;
         this.likes = likes;
     }
+
+    public Mascota() {
+
+    }
+
 
     public String getName() {
         return name;
@@ -32,11 +40,19 @@ public class Mascota {
         this.photo = photo;
     }
 
-    public String getLikes() {
+    public int getLikes() {
         return likes;
     }
 
-    public void setLikes(String likes) {
+    public void setLikes(int likes) {
         this.likes = likes;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

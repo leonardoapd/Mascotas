@@ -1,4 +1,4 @@
-package com.lperdomoduran.mascotas;
+package com.lperdomoduran.mascotas.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

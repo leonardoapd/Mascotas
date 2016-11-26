@@ -1,5 +1,7 @@
-package com.lperdomoduran.mascotas;
+package com.lperdomoduran.mascotas.Adapters;
 
+import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +10,11 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.lperdomoduran.mascotas.Model.ConstructorMascota;
+import com.lperdomoduran.mascotas.Model.Mascota;
+import com.lperdomoduran.mascotas.R;
 
 import java.util.ArrayList;
 
@@ -18,11 +25,15 @@ import java.util.ArrayList;
 public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaViewHolder> {
 
     ArrayList<Mascota> mascotas;
-    int likes = 0;
+    Activity activity;
 
-    public MascotaAdapter(ArrayList<Mascota> mascotas) {
+
+    public MascotaAdapter(ArrayList<Mascota> mascotas, FragmentActivity activity) {
         this.mascotas = mascotas;
+        this.activity = activity;
     }
+
+
 
     @Override
     public MascotaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -35,12 +46,17 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
         final Mascota mascota = mascotas.get(position);
         mascotaViewHolder.iv_photo_cv.setImageResource(mascota.getPhoto());
         mascotaViewHolder.tv_name_cv.setText(mascota.getName());
-        mascotaViewHolder.tv_likes_cv.setText(mascota.getLikes());
+        mascotaViewHolder.tv_likes_cv.setText(String.valueOf(mascota.getLikes()));
 
         mascotaViewHolder.iv_like_cv.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                likes++;
-                mascotaViewHolder.tv_likes_cv.setText("" + likes);
+                Toast.makeText(activity, "Diste like a " + mascota.getName(),
+                        Toast.LENGTH_SHORT).show();
+
+                ConstructorMascota constructorMascota = new ConstructorMascota(activity);
+                constructorMascota.giveLikeMascota(mascota);
+                int likes = constructorMascota.getLikesMascota(mascota);
+                mascotaViewHolder.tv_likes_cv.setText(String.valueOf(likes));
             }
         });
 

@@ -1,4 +1,4 @@
-package com.lperdomoduran.mascotas;
+package com.lperdomoduran.mascotas.MailSender;
 
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.lperdomoduran.mascotas.R;
 
 public class FormActivity extends AppCompatActivity {
 
