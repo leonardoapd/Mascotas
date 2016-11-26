@@ -1,7 +1,7 @@
 # Mascotas
 
 Descripción:
-Mascotas con ViewPager, Fragments, Menu
+Mascotas con ViewPager, Fragments, Menu, Base De Datos y Boton de like funcionando
 ==================================
 
 
