@@ -13,6 +13,3 @@ Mascotas con ViewPager, Fragments, Menu
 <br>
 ![Alt text](https://github.com/leonardoapd/Mascotas/blob/master/imagen4.png)
 <br>
-![Alt text](https://github.com/leonardoapd/Mascotas/blob/master/imagen5.png)
-<br>
-![Alt text](https://github.com/leonardoapd/Mascotas/blob/master/imagen6.png)
